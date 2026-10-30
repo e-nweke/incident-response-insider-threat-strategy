@@ -1,8 +1,8 @@
-# Incident Response – Insider Threat Detection & Forensic Data Collection Strategy
+# Incident Response: Insider Threat Detection & Forensic Data Collection Strategy
 
 A consultancy-style report produced for the Intrusion Detection and Response module of my MSc Cybersecurity at Coventry University. The brief: advise a defense/security-sector client on detecting insider-threat reconnaissance, building a forensically sound data collection strategy, choosing between SIEM platforms, and running through a hypothetical insider-led data exfiltration incident.
 
-> This is an analytical/consultancy report, not a hands-on build — the deliverable was a written strategy and recommendation, not a deployed system. Figures below are reproduced from that report.
+> This is an analytical/consultancy report, not a hands-on build, the deliverable was a written strategy and recommendation, not a deployed system. Figures below are reproduced from that report.
 
 ## Scenario
 
@@ -12,11 +12,11 @@ The client is assumed to operate in defense and security-sector product developm
 
 ## Detecting insider-threat reconnaissance
 
-Covers the behavioural and technical indicators that distinguish an insider probing for exfiltration opportunities from normal activity — unusual access-pattern changes, off-hours authentication, abnormal data-staging behaviour, and the log sources needed to catch it early (authentication logs, DLP alerts, endpoint telemetry, file-access auditing).
+Covers the behavioural and technical indicators that distinguish an insider probing for exfiltration opportunities from normal activity like unusual access-pattern changes, off-hours authentication, abnormal data staging behaviour, and the log sources needed to catch it early (authentication logs, DLP alerts, endpoint telemetry, file access auditing).
 
 ## Data collection strategy for forensic analysis
 
-A structured approach to what to collect, from where, and why — balancing investigative value against operational disruption and the need to preserve forensic integrity (chain of custody, order of volatility, minimizing evidence contamination).
+A structured approach to what to collect, from where, and why which balances investigative value against operational disruption and the need to preserve forensic integrity (chain of custody, order of volatility, minimizing evidence contamination).
 
 ![Data collection strategy for forensic analysis](./figures/fig5_data_collection.jpg)
 
@@ -42,7 +42,7 @@ A walk-through of a hypothetical insider-led exfiltration incident, identifying 
 
 ## Cost-effectiveness analysis
 
-A justification of the recommended investment across equipment, human resources and operational-impact categories, weighing upfront cost against long-term resilience and breach-risk reduction.
+A justification of the recommended investment across equipment, human resources and operational-impact categories, weighing upfront cost against long term resilience and breach-risk reduction.
 
 ![Cost justification](./figures/fig7_cost_justification.jpg)
 
