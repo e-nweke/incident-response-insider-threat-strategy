@@ -1,28 +1,26 @@
 # Incident Response: Insider Threat Detection & Forensic Data Collection Strategy
 
-A consultancy-style report produced for the Intrusion Detection and Response module of my MSc Cybersecurity at Coventry University. The brief: advise a defense/security-sector client on detecting insider-threat reconnaissance, building a forensically sound data collection strategy, choosing between SIEM platforms, and running through a hypothetical insider-led data exfiltration incident.
+## What this project is about
 
-> This is an analytical/consultancy report, not a hands-on build, the deliverable was a written strategy and recommendation, not a deployed system. Figures below are reproduced from that report.
+I was given a consultancy-style brief: advise a client in the defense/security sector on how to detect insider-threat reconnaissance, build out a forensically sound data collection strategy, choose between SIEM platforms, and be ready to run a real incident response if an insider actually tried to exfiltrate data. This wasn't a hands-on build, it's a written strategy and set of recommendations, the kind of report you'd actually hand to a client before deploying anything.
 
-## Scenario
-
-The client is assumed to operate in defense and security-sector product development, serving government departments, multinational firms and foreign agencies — a high-value target for insider threats and advanced persistent threats (APTs). The assumed network spans multiple client subnets, Wi-Fi access points, server farms and a core backbone behind a single internet gateway.
+The assumed client operates in defense/security product development, serving government departments, multinational firms and foreign agencies, which makes them a high-value target for both insider threats and advanced persistent threats. I worked from an assumed network spanning multiple client subnets, Wi-Fi access points, server farms and a core backbone behind a single internet gateway.
 
 ![Assumed client network architecture](./figures/fig1_network_architecture.jpg)
 
 ## Detecting insider-threat reconnaissance
 
-Covers the behavioural and technical indicators that distinguish an insider probing for exfiltration opportunities from normal activity like unusual access-pattern changes, off-hours authentication, abnormal data staging behaviour, and the log sources needed to catch it early (authentication logs, DLP alerts, endpoint telemetry, file access auditing).
+Before someone exfiltrates data, they're usually probing around first, so I looked at what distinguishes that from normal activity: unusual changes in access patterns, off-hours authentication, data getting staged somewhere it shouldn't be. I mapped out which log sources actually catch this early (authentication logs, DLP alerts, endpoint telemetry, file-access auditing) rather than finding out after the fact.
 
 ## Data collection strategy for forensic analysis
 
-A structured approach to what to collect, from where, and why which balances investigative value against operational disruption and the need to preserve forensic integrity (chain of custody, order of volatility, minimizing evidence contamination).
+I worked through what to collect, from where, and why, while balancing investigative value against how much disruption it causes operationally. Forensic integrity mattered a lot here: chain of custody, order of volatility, not contaminating evidence while collecting it.
 
 ![Data collection strategy for forensic analysis](./figures/fig5_data_collection.jpg)
 
 ## SIEM platform comparison: Splunk vs Elastic Stack
 
-A comparison of Splunk Enterprise Security + SOAR against Elastic Security for insider-threat detection and automated response, weighing deployment cost, scalability, automation capability and ease of use.
+I compared Splunk Enterprise Security plus SOAR against Elastic Security specifically for insider-threat detection and automated response, weighing cost, scalability, automation capability and how easy each is to actually use day to day.
 
 ![Splunk vs Elastic comparison](./figures/fig4_splunk_vs_elastic.jpg)
 
@@ -36,13 +34,13 @@ A comparison of Splunk Enterprise Security + SOAR against Elastic Security for i
 
 ## Incident response exercise: insider-led data exfiltration
 
-A walk-through of a hypothetical insider-led exfiltration incident, identifying the forensic data sources needed, gaps in existing visibility, and forensically sound collection practices (write-blocking, hashing, documented chain of custody) — plus how the response would adapt if the activity showed signs of a broader APT campaign rather than a lone insider.
+I walked through a hypothetical insider-led exfiltration incident end to end: what forensic data sources you'd actually need, where the gaps in existing visibility would be, and how to collect evidence in a way that holds up (write-blocking, hashing, a documented chain of custody). I also looked at how the response would need to change if what looked like one insider turned out to be part of a broader APT campaign.
 
 ![Incident response process flowchart](./figures/appendixA_ir_flowchart.jpg)
 
 ## Cost-effectiveness analysis
 
-A justification of the recommended investment across equipment, human resources and operational-impact categories, weighing upfront cost against long term resilience and breach-risk reduction.
+I justified the recommended investment across equipment, people, and operational impact, weighing the upfront cost against the long-term reduction in breach risk.
 
 ![Cost justification](./figures/fig7_cost_justification.jpg)
 
@@ -54,10 +52,13 @@ A justification of the recommended investment across equipment, human resources 
 | Operational Impact | Temporary disruptions during implementation | Long-term resilience and reduced breach risk |
 
 ## Topics covered
-Insider threat detection, forensic readiness, chain of custody, SIEM/SOAR platform evaluation (Splunk Enterprise Security, Elastic Security), incident response lifecycle (detection → analysis & triage → containment → eradication → recovery → post-incident review), APT considerations, cost-benefit analysis for security investment.
+
+Insider threat detection, forensic readiness, chain of custody, SIEM/SOAR platform evaluation (Splunk Enterprise Security, Elastic Security), the incident response lifecycle (detection, analysis & triage, containment, eradication, recovery, post-incident review), APT considerations, cost-benefit analysis for security investment.
 
 ## Evidence
+
 Full-size figures and supporting tables are in [`figures/`](./figures).
 
 ## Disclaimer
-This report was produced as academic coursework based on an assumed client scenario. It does not describe a real organisation's network or incident.
+
+This report is based on an assumed client scenario. It doesn't describe a real organisation's network or an actual incident.
