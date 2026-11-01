@@ -2,7 +2,7 @@
 
 ## What this project is about
 
-I was given a consultancy-style brief: advise a client in the defense/security sector on how to detect insider-threat reconnaissance, build out a forensically sound data collection strategy, choose between SIEM platforms, and be ready to run a real incident response if an insider actually tried to exfiltrate data. This wasn't a hands-on build, it's a written strategy and set of recommendations, the kind of report you'd actually hand to a client before deploying anything.
+The task was to advise a client in the defense/security sector on how to detect insider-threat reconnaissance, build out a forensically sound data collection strategy, choose between SIEM platforms, and be ready to run a real incident response if an insider tried to exfiltrate data. This wasn't a hands-on build, it's a written strategy and set of recommendations, the kind of report you'd hand to a client before deploying anything.
 
 The assumed client operates in defense/security product development, serving government departments, multinational firms and foreign agencies, which makes them a high-value target for both insider threats and advanced persistent threats. I worked from an assumed network spanning multiple client subnets, Wi-Fi access points, server farms and a core backbone behind a single internet gateway.
 
@@ -10,7 +10,7 @@ The assumed client operates in defense/security product development, serving gov
 
 ## Detecting insider-threat reconnaissance
 
-Before someone exfiltrates data, they're usually probing around first, so I looked at what distinguishes that from normal activity: unusual changes in access patterns, off-hours authentication, data getting staged somewhere it shouldn't be. I mapped out which log sources actually catch this early (authentication logs, DLP alerts, endpoint telemetry, file-access auditing) rather than finding out after the fact.
+Before someone exfiltrates data, they're usually probing around first, so I looked at what distinguishes that from normal activity: unusual changes in access patterns, off-hours authentication, data getting staged somewhere it shouldn't be. I mapped out which log sources catch this early (authentication logs, DLP alerts, endpoint telemetry, file-access auditing) rather than finding out after the fact.
 
 ## Data collection strategy for forensic analysis
 
@@ -20,7 +20,7 @@ I worked through what to collect, from where, and why, while balancing investiga
 
 ## SIEM platform comparison: Splunk vs Elastic Stack
 
-I compared Splunk Enterprise Security plus SOAR against Elastic Security specifically for insider-threat detection and automated response, weighing cost, scalability, automation capability and how easy each is to actually use day to day.
+Splunk Enterprise Security plus SOAR went up against Elastic Security here, judged specifically on insider-threat detection and automated response, and weighed on cost, scalability, automation capability and how easy each is to run day to day.
 
 ![Splunk vs Elastic comparison](./figures/fig4_splunk_vs_elastic.jpg)
 
@@ -34,13 +34,13 @@ I compared Splunk Enterprise Security plus SOAR against Elastic Security specifi
 
 ## Incident response exercise: insider-led data exfiltration
 
-I walked through a hypothetical insider-led exfiltration incident end to end: what forensic data sources you'd actually need, where the gaps in existing visibility would be, and how to collect evidence in a way that holds up (write-blocking, hashing, a documented chain of custody). I also looked at how the response would need to change if what looked like one insider turned out to be part of a broader APT campaign.
+This section runs a hypothetical insider-led exfiltration incident end to end: which forensic data sources you'd need, where the gaps in existing visibility would be, and how to collect evidence in a way that holds up (write-blocking, hashing, a documented chain of custody). It also covers how the response would change if what looked like one insider turned out to be part of a broader APT campaign.
 
 ![Incident response process flowchart](./figures/appendixA_ir_flowchart.jpg)
 
 ## Cost-effectiveness analysis
 
-I justified the recommended investment across equipment, people, and operational impact, weighing the upfront cost against the long-term reduction in breach risk.
+The recommended investment is justified across equipment, people, and operational impact, weighing upfront cost against the long-term reduction in breach risk.
 
 ![Cost justification](./figures/fig7_cost_justification.jpg)
 
