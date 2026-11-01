@@ -57,7 +57,7 @@ Insider threat detection, forensic readiness, chain of custody, SIEM/SOAR platfo
 
 ## Evidence
 
-Full-size figures and supporting tables are in [`figures/`](./figures).
+Full-size versions of all figures and supporting tables (including the Appendix B and C tables) are in [`figures/`](./figures).
 
 ## Disclaimer
 
